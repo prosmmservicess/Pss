@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Pro SMM Services</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,sans-serif;color:#172033;background:#f5f8ff;overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;width:500px;height:500px;border-radius:50%;filter:blur(90px);opacity:.23;z-index:-2;animation:float 12s ease-in-out infinite}
+body:before{background:#00c6ff;left:-180px;top:80px}body:after{background:#b24cff;right:-200px;bottom:0;animation-delay:-5s}
+@keyframes float{50%{transform:translate(90px,-50px) scale(1.15)}}@keyframes pulse{50%{box-shadow:0 0 35px #00e5ff55}}@keyframes up{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+.container{width:min(1180px,92%);margin:auto}.header{position:sticky;top:0;z-index:50;background:#ffffffd9;border-bottom:1px solid #dbe4f5;backdrop-filter:blur(18px)}.nav{height:72px;display:flex;align-items:center;justify-content:space-between}.logo{font-weight:800;font-size:20px;color:#17203a}.logo span{background:linear-gradient(90deg,#00e5ff,#7c5cff,#ff2bd6);-webkit-background-clip:text;color:transparent}.navlinks{display:flex;gap:28px;color:#59647b;font-size:13px}.navlinks a:hover{color:#fff}.navbtn{border:1px solid #d8e2f2;background:#ffffffaa;color:#fff;padding:10px 15px;border-radius:10px}
+.hero{min-height:650px;display:flex;align-items:center;padding:75px 0}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.tag{display:inline-block;padding:8px 12px;border:1px solid #00bcd455;border-radius:99px;background:#00cfe80d;color:#08758b;font-size:11px;font-weight:700;letter-spacing:1px}.hero h1{font-size:clamp(43px,6vw,76px);line-height:1.02;letter-spacing:-3.5px;margin:22px 0 18px;animation:up .7s}.gradient{background:linear-gradient(90deg,#00e5ff,#7c5cff 45%,#ff2bd6);-webkit-background-clip:text;color:transparent;background-size:200%;animation:shine 5s linear infinite}@keyframes shine{to{background-position:200%}}.hero p{color:#657089;line-height:1.8;max-width:650px;font-size:16px}.actions{display:flex;gap:12px;margin:28px 0}.primary{border:0;color:#061017;font-weight:800;padding:14px 20px;border-radius:12px;background:linear-gradient(100deg,#00e5ff,#79f7df);cursor:pointer;animation:pulse 3s infinite}.secondary{padding:13px 18px;border:1px solid #d8e2f2;border-radius:12px;color:#fff;background:#ffffff}.hero-panel{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#ffffff 0%,#e8fbff 38%,#f3e9ff 72%,#ffe8f7 100%);
+  border:1px solid #ffffff;border-radius:28px;padding:24px;
+  box-shadow:0 25px 80px rgba(70,85,150,.18),inset 0 1px 0 #fff;
+  color:#18203a;
+}
+.hero-panel:before{
+  content:"";position:absolute;width:220px;height:220px;right:-80px;top:-90px;
+  border-radius:50%;filter:blur(18px);
+  background:linear-gradient(135deg,#00d9ff88,#7c5cff66,#ff4fc866);
+  animation:dashOrb 7s ease-in-out infinite;
+}
+.hero-panel:after{
+  content:"";position:absolute;left:-120%;top:0;width:65%;height:100%;
+  transform:skewX(-18deg);background:linear-gradient(90deg,transparent,#ffffffaa,transparent);
+  animation:dashShine 5s ease-in-out infinite;pointer-events:none;
+}
+.hero-panel>*{position:relative;z-index:1}
+.panel-head{display:flex;justify-content:space-between;color:#59647b;font-size:12px}.live{color:#08a66b;font-weight:800}.big-number{font-size:58px;font-weight:800;margin:30px 0 4px}.mini{display:grid;grid-template-columns:1fr 1fr;gap:12px}.mini div{border:1px solid #ffffff0d;background:#f8fbff;border-radius:16px;padding:17px}.mini b{display:block;font-size:23px;margin:7px 0}.mini small{color:#74809a}.bar{height:7px;background:#ffffff0b;border-radius:99px;margin:22px 0;overflow:hidden}.bar span{display:block;height:100%;width:78%;background:linear-gradient(90deg,#00e5ff,#7c5cff,#ff2bd6);animation:load 2s}@keyframes load{from{width:0}}
+.section{padding:80px 0}.section-head{display:flex;align-items:end;justify-content:space-between;margin-bottom:30px}.eyebrow{font-size:10px;letter-spacing:1.5px;color:#08758b;font-weight:800}.section h2{font-size:38px;letter-spacing:-1.8px;margin:8px 0}.section-head p{color:#68748d;max-width:440px;line-height:1.6;font-size:13px}.services{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}.card{position:relative;background:linear-gradient(160deg,#121323,#0c0e18);border:1px solid #dbe4f5;border-radius:19px;padding:20px;overflow:hidden;transition:.25s}.card:before{content:"";position:absolute;inset:-1px;background:linear-gradient(135deg,#00e5ff33,transparent 35%,#ff2bd633);opacity:0;transition:.25s;z-index:0}.card:hover{transform:translateY(-7px);border-color:#ffffff27}.card:hover:before{opacity:1}.card>*{position:relative;z-index:1}.icon{font-size:28px;width:50px;height:50px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#00e5ff16,#ff2bd616);border:1px solid #ffffff10}.card h3{margin:14px 0 6px}.card p{font-size:12px;color:#77839b;min-height:34px}.offer{border-top:1px solid #dbe4f5;padding-top:12px;margin-top:14px}.offerrow{display:flex;justify-content:space-between;align-items:center;padding:8px 0;font-size:12px;color:#4f5b74}.price{font-weight:800;color:#17203a}.buy{width:100%;margin-top:7px;padding:10px;border:0;border-radius:10px;background:linear-gradient(90deg,#00e5ff,#8df2dd);font-weight:800;color:#08202a;cursor:pointer}.buy:hover{filter:brightness(1.1)}
+.how{background:#eef4ff;border-top:1px solid #ffffff08;border-bottom:1px solid #dbe4f5}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.step{border:1px solid #dbe4f5;background:#ffffff;border-radius:18px;padding:22px}.num{color:#ff75e2;font-weight:800;font-size:12px}.step h3{font-size:15px}.step p{color:#878ea4;font-size:13px;line-height:1.6}.footer{padding:28px 0;color:#7b8498;font-size:12px;display:flex;justify-content:space-between}
+.quick-services{padding:0 0 35px}.quick-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;font-size:11px;letter-spacing:1.4px;font-weight:800;color:#52617a}.quick-title small{letter-spacing:0;text-transform:none;font-weight:600;color:#8190a8}.quick-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.quick-grid>div{cursor:pointer;padding:15px 16px;border:1px solid #dbe4f5;border-radius:15px;background:#ffffffcc;box-shadow:0 10px 25px #7b8ba51a;display:grid;grid-template-columns:auto 1fr;column-gap:10px;align-items:center;transition:.2s}.quick-grid>div:hover{transform:translateY(-3px);box-shadow:0 14px 30px #6577a52b}.quick-grid b{font-size:13px;color:#172033}.quick-grid span{grid-column:2;color:#71809a;font-size:11px;margin-top:2px}@media(max-width:900px){.quick-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.quick-grid{grid-template-columns:1fr}}
+.modal{position:fixed;inset:0;z-index:100;display:grid;place-items:center}.hide{display:none}.shade{position:absolute;inset:0;background:#17203399;backdrop-filter:blur(9px)}.modalbox{position:relative;width:min(500px,92%);max-height:90vh;overflow:auto;background:#ffffff;border:1px solid #d8e2f2;border-radius:23px;padding:26px;box-shadow:0 25px 80px #5b6b8526}.close{position:absolute;right:14px;top:12px;width:34px;height:34px;border-radius:9px;border:1px solid #d8e2f2;background:#ffffffaa;color:#26314b;font-size:22px;cursor:pointer}.modalbox h3{font-size:22px;margin:8px 35px 5px 0}.muted{font-size:12px;color:#74809a;line-height:1.6}.label{display:block;font-size:11px;color:#66718a;margin:18px 0 7px}.input{width:100%;padding:13px;border-radius:11px;border:1px solid #cbd7ea;background:#f7faff;color:#172033;outline:none}.input:focus{border-color:#00a9c7}.notice{padding:13px;border-radius:12px;background:#00e5ff0c;border:1px solid #00e5ff30;color:#08758b;font-size:12px;line-height:1.55;margin-top:14px}.success{background:#54efad0e;border-color:#54efad44;color:#087c52}.full{width:100%;margin-top:18px}.amount{text-align:center;font-size:34px;font-weight:800;margin-top:18px}.order{text-align:center;color:#74809a;font-size:11px}.qr{display:block;width:225px;height:225px;padding:9px;background:#fff;border-radius:14px;margin:17px auto}.center{text-align:center}code{color:#08758b}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.services{grid-template-columns:repeat(2,1fr)}.steps{grid-template-columns:repeat(2,1fr)}.navlinks{display:none}}
+@media(max-width:560px){.services,.steps{grid-template-columns:1fr}.section{padding:55px 0}.hero{padding:55px 0}.hero h1{letter-spacing:-2.5px}.section-head{display:block}.section-head p{margin-top:14px}.footer{gap:10px;flex-direction:column}}
+
+.service-tabs{display:flex;gap:8px;overflow-x:auto;padding:3px 0 18px;margin-bottom:6px;scrollbar-width:none}
+.service-tabs::-webkit-scrollbar{display:none}.tab{flex:0 0 auto;border:1px solid #dce3ef;background:#fff;color:#59647b;border-radius:999px;padding:9px 14px;font-size:12px;font-weight:700;cursor:pointer}.tab.active{color:#fff;border-color:transparent;background:linear-gradient(90deg,#00bcd4,#6f5cff,#ef55bf);box-shadow:0 8px 22px #6f5cff22}
+.services{align-items:stretch}.card{box-shadow:0 12px 35px #5265a211}.card h3{color:#1b2640}.card .icon{color:#23304a}
+@media(max-width:560px){.container{width:94%}.header .nav{height:62px}.navbtn{padding:9px 12px;font-size:12px}.hero{min-height:auto;padding:48px 0 35px}.hero-grid{gap:28px}.hero p{font-size:14px}.actions{margin:22px 0;flex-direction:column}.actions button,.actions a{text-align:center;width:100%}.hero-panel{padding:18px;border-radius:20px}.big-number{font-size:45px;margin:20px 0 3px}.mini{gap:8px}.mini div{padding:13px}.mini b{font-size:20px}.section h2{font-size:30px}.section-head{margin-bottom:20px}.services{gap:12px}.card{padding:16px;border-radius:17px}.card p{min-height:auto}.offerrow{padding:7px 0}.buy{padding:12px;font-size:13px}.steps{gap:10px}.step{padding:17px}.footer{font-size:11px}}
+
+.services-section{position:relative}.service-card-static{min-height:620px}
+.service-head{display:flex;align-items:center;gap:13px;margin-bottom:8px}
+.service-head h3{margin:3px 0 0;font-size:17px}.platform{font-size:9px;letter-spacing:1.4px;font-weight:800;color:#08758b}
+.service-desc{margin:5px 0 0!important;min-height:auto!important}
+.service-card-static .offer{margin-top:18px}
+.service-card-static .buy{background:#fff;border:1px solid #dfe5ef;box-shadow:0 5px 14px #65739a12;margin-bottom:5px}
+.service-card-static .buy:hover{background:linear-gradient(90deg,#00dff5,#b7ffe9);border-color:transparent}
+@media(max-width:900px){.service-card-static{min-height:auto}}
+@media(max-width:560px){.service-card-static{min-height:auto}.service-head h3{font-size:18px}.service-card-static .buy{padding:12px}}
+
+/* Animated service cards */
+.service-card-static{
+  position:relative;
+  isolation:isolate;
+  border:1px solid transparent!important;
+  background:
+    linear-gradient(145deg,#ffffff,#f4f7ff) padding-box,
+    linear-gradient(135deg,#00d9ff,#735cff,#ff4fc8,#00d9ff) border-box!important;
+  background-size:100% 100%,300% 300%!important;
+  animation:cardBorder 8s ease infinite;
+  box-shadow:0 18px 50px rgba(65,75,130,.12),inset 0 1px 0 #fff;
+}
+.service-card-static:before{
+  content:"";
+  position:absolute;
+  width:210px;height:210px;
+  right:-95px;top:-100px;
+  border-radius:50%;
+  background:linear-gradient(135deg,#00e5ff55,#8a5cff44,#ff4fc833);
+  filter:blur(25px);
+  z-index:-1;
+  animation:orbMove 7s ease-in-out infinite;
+}
+.service-card-static:after{
+  content:"";
+  position:absolute;
+  left:-120%;top:0;
+  width:70%;height:100%;
+  transform:skewX(-18deg);
+  background:linear-gradient(90deg,transparent,#ffffffaa,transparent);
+  pointer-events:none;
+  animation:cardShine 5.5s ease-in-out infinite;
+}
+.service-card-static:hover{
+  transform:translateY(-10px) scale(1.012);
+  box-shadow:0 25px 65px rgba(71,76,150,.22),0 0 35px rgba(0,217,255,.12);
+}
+.service-card-static .icon{
+  background:linear-gradient(135deg,#e1fbff,#eee8ff,#ffe5f7);
+  border:1px solid #d9def0;
+  box-shadow:0 20px 80px rgba(87,81,170,.12);
+  animation:iconFloat 4s ease-in-out infinite;
+}
+.service-card-static:nth-child(2) .icon{animation-delay:-1s}
+.service-card-static:nth-child(3) .icon{animation-delay:-2s}
+.service-card-static:nth-child(4) .icon{animation-delay:-3s}
+.service-card-static .offer{
+  background:rgba(246,248,255,.78);
+  border:1px solid #e3e8f3;
+  border-radius:15px;
+  padding:10px;
+}
+.service-card-static .offerrow{
+  padding:10px 4px 7px;
+}
+.service-card-static .buy{
+  position:relative;
+  overflow:hidden;
+  background:linear-gradient(90deg,#00d9ee,#8a6cff,#ff57c8)!important;
+  background-size:220% 100%!important;
+  color:#fff!important;
+  border:0!important;
+  box-shadow:0 8px 20px rgba(115,92,255,.18);
+  transition:.25s;
+  animation:buttonGradient 5s linear infinite;
+}
+.service-card-static .buy:after{
+  content:"";
+  position:absolute;top:0;left:-80%;
+  width:45%;height:100%;
+  transform:skewX(-22deg);
+  background:#ffffff66;
+  animation:buttonShine 3.5s infinite;
+}
+.service-card-static .buy:hover{
+  transform:scale(1.025);
+  box-shadow:0 12px 28px rgba(115,92,255,.28);
+}
+@keyframes cardBorder{
+  0%,100%{background-position:0 0,0% 50%}
+  50%{background-position:0 0,100% 50%}
+}
+@keyframes orbMove{
+  0%,100%{transform:translate(0,0) scale(1)}
+  50%{transform:translate(-35px,35px) scale(1.18)}
+}
+@keyframes cardShine{
+  0%,45%{left:-120%}
+  70%,100%{left:150%}
+}
+@keyframes iconFloat{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-5px) rotate(2deg)}
+}
+@keyframes buttonGradient{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+@keyframes buttonShine{
+  0%,45%{left:-80%}
+  65%,100%{left:145%}
+}
+@media(prefers-reduced-motion:reduce){
+  .service-card-static,.service-card-static:before,.service-card-static:after,
+  .service-card-static .icon,.service-card-static .buy,.service-card-static .buy:after{animation:none!important}
+}
+@keyframes dashOrb{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(-35px,35px) scale(1.18)}}
+@keyframes dashShine{0%,42%{left:-120%}68%,100%{left:150%}}
+@keyframes miniFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.animated-dashboard-title{display:inline-block;background:linear-gradient(90deg,#08758b,#6d50df,#d63a9e,#08758b);background-size:250% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:titleGradient 4s linear infinite}
+@keyframes titleGradient{to{background-position:250% center}}
+
+/* Requested header fixes only */
+.navlinks a{color:#46536d!important;text-decoration:none!important}
+.navlinks a:hover{color:#6d4ee8!important}
+.navbtn{color:#25314b!important;background:#ffffff!important;border-color:#d8e2f2!important;cursor:pointer}
+.top-logo-link{
+  display:flex;align-items:center;justify-content:center;
+  width:42px;height:42px;margin-left:auto;margin-right:9px;
+  border-radius:12px;border:1px solid #d8e2f2;
+  background:#fff;box-shadow:0 7px 20px rgba(71,82,140,.10);
+  overflow:hidden;text-decoration:none;
+}
+.top-logo{width:34px;height:34px;object-fit:contain;border-radius:9px}
+.secondary{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:47px;background:#fff!important;color:#34415e!important;
+  border:1px solid #d6deeb!important;font-weight:700;
+  box-shadow:0 8px 20px rgba(71,82,140,.08);
+}
+.secondary:hover{color:#684ce1!important;border-color:#b9aaff!important}
+@media(max-width:560px){
+  .top-logo-link{width:38px;height:38px;margin-right:3px}
+  .top-logo{width:30px;height:30px}
+  .navbtn{font-size:12px;padding:9px 12px}
+}
+</style>
+</head>
+<body>
+<header class="header"><div class="container nav">
+<div class="logo">✦ <span>Pro SMM Services</span></div>
+<nav class="navlinks"><a href="#services">Services</a><a href="#how">How it works</a><a href="#faq">FAQ</a></nav>
+<a class="top-logo-link" href="#" aria-label="Pro SMM Services logo">
+<img id="topLogo" class="top-logo" src="" alt="Logo">
+</a>
+<button class="navbtn" onclick="goServices()">Get Started</button>
+</div></header>
+
+<section class="hero"><div class="container hero-grid">
+<div>
+<span class="tag">⚡ FAST • SIMPLE • 24/7 ORDERS</span>
+<h1>Make your social presence <span class="gradient">stand out.</span></h1>
+<p>Affordable Instagram, YouTube, Telegram and Facebook promotion services. Select a package, enter your public target, pay the fixed amount and submit your UTR for secure server-side verification.</p>
+<div class="actions"><button class="primary" onclick="goServices()">Explore Services →</button><a class="secondary" href="#how">How it works</a></div>
+</div>
+<div class="hero-panel">
+<div class="panel-head"><b class="animated-dashboard-title">PRO SMM DASHBOARD</b><span class="live">● LIVE</span></div>
+<div class="big-number">3100+</div><div class="muted">Trusted Costumers</div>
+<div class="mini"><div>Instagram<b>1895+</b><small>Costumers</small></div><div>YouTube<b>1154+</b><small>Costumers</small></div><div>Telegram<b>1548+</b><small>Costumers</small></div><div>Facebook<b>458+</b><small>Costumers</small></div></div>
+<div class="bar"><span></span></div><div class="muted">Order flow: Target → Payment → UTR verification</div>
+</div>
+</div></section>
+
+
+
+
+<section id="services" class="section services-section"><div class="container">
+<div class="section-head"><div><div class="eyebrow">OUR SERVICES</div><h2>All services</h2></div><p>Choose any platform and package. Every package has its own Buy Now button.</p></div>
+<div class="service-tabs">
+<button class="tab active" onclick="filterServices('all',this)">All Services</button>
+<button class="tab" onclick="filterServices('Instagram',this)">Instagram</button>
+<button class="tab" onclick="filterServices('YouTube',this)">YouTube</button>
+<button class="tab" onclick="filterServices('Telegram',this)">Telegram</button>
+<button class="tab" onclick="filterServices('Facebook',this)">Facebook</button>
+</div>
+
+<div id="grid" class="services">
+
+<article class="card service-card-static" data-platform="Instagram">
+  <div class="service-head"><div class="icon" id="instagramIcon"></div><div><span class="platform">INSTAGRAM</span><h3>Instagram Growth</h3></div></div>
+  <p class="service-desc">Followers, likes & reel/video views</p>
+  <div class="offer"><div class="offerrow"><span>5,000 Followers</span><b class="price">₹29</b></div><button class="buy" onclick="orderStatic('Instagram','5,000 Followers','₹29')">Buy Now →</button>
+  <div class="offerrow"><span>10,000 Followers</span><b class="price">₹55</b></div><button class="buy" onclick="orderStatic('Instagram','10,000 Followers','₹55')">Buy Now →</button>
+  <div class="offerrow"><span>10,000 Likes</span><b class="price">₹22</b></div><button class="buy" onclick="orderStatic('Instagram','10,000 Likes','₹39')">Buy Now →</button>
+  <div class="offerrow"><span>50,000 Views</span><b class="price">₹19</b></div><button class="buy" onclick="orderStatic('Instagram','50,000 Views','₹29')">Buy Now →</button></div>
+</article>
+
+<article class="card service-card-static" data-platform="YouTube">
+  <div class="service-head"><div class="icon" id="youtubeIcon"></div><div><span class="platform">YOUTUBE</span><h3>YouTube Growth</h3></div></div>
+  <p class="service-desc">Views, likes & channel promotion</p>
+  <div class="offer"><div class="offerrow"><span>1,000 Views</span><b class="price">₹19</b></div><button class="buy" onclick="orderStatic('YouTube','1,000 Views','₹19')">Buy Now →</button>
+  <div class="offerrow"><span>10,000 Shorts Views</span><b class="price">₹49</b></div><button class="buy" onclick="orderStatic('YouTube','10,000 Views','₹79')">Buy Now →</button>
+  <div class="offerrow"><span>1,000 Likes</span><b class="price">₹49</b></div><button class="buy" onclick="orderStatic('YouTube','1,000 Likes','₹49')">Buy Now →</button>
+  <div class="offerrow"><span>1,000 Subscribers</span><b class="price">₹49</b></div><button class="buy" onclick="orderStatic('YouTube','1,000 Subscribers','₹149')">Buy Now →</button></div>
+</article>
+
+<article class="card service-card-static" data-platform="Telegram">
+  <div class="service-head"><div class="icon" id="telegramIcon"></div><div><span class="platform">TELEGRAM</span><h3>Telegram Growth</h3></div></div>
+  <p class="service-desc">Channel & group member packages</p>
+  <div class="offer"><div class="offerrow"><span>1,000 Members</span><b class="price">₹19</b></div><button class="buy" onclick="orderStatic('Telegram','1,000 Members','₹39')">Buy Now →</button>
+  <div class="offerrow"><span>5,000 Members</span><b class="price">₹89</b></div><button class="buy" onclick="orderStatic('Telegram','5,000 Members','₹149')">Buy Now →</button>
+  <div class="offerrow"><span>10,000 Members</span><b class="price">₹889</b></div><button class="buy" onclick="orderStatic('Telegram','10,000 Members','₹279')">Buy Now →</button>
+  <div class="offerrow"><span>1,000 Post Views</span><b class="price">₹19</b></div><button class="buy" onclick="orderStatic('Telegram','1,000 Post Views','₹19')">Buy Now →</button></div>
+</article>
+
+<article class="card service-card-static" data-platform="Facebook">
+  <div class="service-head"><div class="icon" id="facebookIcon"></div><div><span class="platform">FACEBOOK</span><h3>Facebook Growth</h3></div></div>
+  <p class="service-desc">Page followers, likes & post views</p>
+  <div class="offer"><div class="offerrow"><span>1,000 Followers</span><b class="price">₹29</b></div><button class="buy" onclick="orderStatic('Facebook','1,000 Followers','₹29')">Buy Now →</button>
+  <div class="offerrow"><span>5,000 Followers</span><b class="price">₹119</b></div><button class="buy" onclick="orderStatic('Facebook','5,000 Followers','₹119')">Buy Now →</button>
+  <div class="offerrow"><span>1,000 Likes</span><b class="price">₹25</b></div><button class="buy" onclick="orderStatic('Facebook','1,000 Likes','₹25')">Buy Now →</button>
+  <div class="offerrow"><span>10,000 Post Views</span><b class="price">₹39</b></div><button class="buy" onclick="orderStatic('Facebook','10,000 Post Views','₹39')">Buy Now →</button></div>
+</article>
+
+</div></div></section>
+
+<section id="how" class="section how"><div class="container">
+<div class="eyebrow">SIMPLE CHECKOUT</div><h2>Order in 4 steps</h2>
+<div class="steps">
+<div class="step"><span class="num">01</span><h3>Choose a package</h3><p>Select followers, likes, views or members.</p></div>
+<div class="step"><span class="num">02</span><h3>Submit target</h3><p>Enter a public profile, post, video or channel link.</p></div>
+<div class="step"><span class="num">03</span><h3>Pay</h3><p>A QR code is generated with the exact fixed amount.</p></div>
+<div class="step"><span class="num">04</span><h3>Verify UTR</h3><p>Your server/payment provider verifies the transaction.</p></div>
+</div></div></section>
+
+<section id="faq" class="section"><div class="container">
+<div class="eyebrow">FAQ</div><h2>Questions?</h2>
+<details><summary>Do I need to share my password?</summary><p class="muted">No. The flow only asks for the public target required by the service.</p></details>
+<details><summary>Can UTR verification be automatic?</summary><p class="muted">Yes.the utr will outoomaticly verified by the server</p></details>
+</div></section>
+<footer><div class="container footer"><span>© 2026 Pro SMM Services</span><span>Professional social media services</span></div></footer>
+
+<div id="modal" class="modal hide"><div class="shade" onclick="closeModal()"></div><div class="modalbox"><button class="close" onclick="closeModal()">×</button><div id="content"></div></div></div>
+
+<script>
+/* =========================================================
+   TOP-RIGHT LOGO
+   Paste your logo image URL between the quotes.
+   ========================================================= */
+const TOP_LOGO_URL="https://www.image2url.com/r2/default/images/1789786254715-7b0733c7-d356-4be6-bc30-ef0658e08684.png";
+function setupTopLogo(){
+  const img=document.getElementById("topLogo");
+  if(!img) return;
+  if(TOP_LOGO_URL.trim()){
+    img.src=TOP_LOGO_URL.trim();
+    img.style.display="block";
+  }else{
+    img.style.display="none";
+  }
+}
+/* APP ICON URLS: paste your own image URLs here. Leave empty for built-in icons. */
+const APP_ICON_URLS={Instagram:"https://img.icons8.com/fluent/1200/instagram-new.jpg",YouTube:"https://th.bing.com/th/id/OIP.bfjgeN7lcqzedYWTMDtz6QHaHa?w=192&h=192&c=7&r=0&o=7&pid=1.7&rm=3",Telegram:"https://th.bing.com/th/id/OIP.fyCCXwkRz9vrY_TsNRq5rgHaHa?w=193&h=193&c=7&r=0&o=7&pid=1.7&rm=3",Facebook:"https://freepnglogo.com/images/all_img/1730342312_facebook-logo-social-media-icon-png.png"};
+function platformIcon(platform,fallback){
+  const url=(APP_ICON_URLS[platform]||"").trim();
+  if(!url) return fallback;
+  return '<img src="'+url+'" alt="'+platform+' icon" style="width:50px;height:50px;object-fit:contain;border-radius:9px" onerror="this.style.display=\'none\'">';
+}
+
+const services=[
+{p:"Instagram",i:"◎",d:"Followers, likes & reel/video views",o:[["5,000 Followers","₹29"],["10,000 Followers","₹55"],["10,000 Likes","₹39"],["50,000 Views","₹29"]]},
+{p:"YouTube",i:"▶",d:"Views, likes & channel promotion",o:[["1,000 Views","₹19"],["10,000 Views","₹79"],["1,000 Likes","₹49"],["1,000 Subscribers","₹149"]]},
+{p:"Telegram",i:"✈",d:"Channel & group member packages",o:[["1,000 Members","₹39"],["5,000 Members","₹149"],["10,000 Members","₹279"],["1,000 Post Views","₹19"]]},
+{p:"Facebook",i:"f",d:"Page followers, likes & post views",o:[["1,000 Followers","₹29"],["5,000 Followers","₹119"],["1,000 Likes","₹25"],["10,000 Post Views","₹39"]]}
+];
+
+let selected,orderId;
+setupTopLogo();
+document.getElementById("instagramIcon").innerHTML=platformIcon("Instagram","◎");
+document.getElementById("youtubeIcon").innerHTML=platformIcon("YouTube","▶");
+document.getElementById("telegramIcon").innerHTML=platformIcon("Telegram","✈");
+document.getElementById("facebookIcon").innerHTML=platformIcon("Facebook","f");
+
+function orderStatic(platform, offer, price){
+  selected={p:platform, offer:[offer,price]};
+  orderId="PS"+Date.now().toString().slice(-8);
+  openModal('<div class="eyebrow">'+platform.toUpperCase()+'</div><h3>'+offer+'</h3><p class="muted">Enter the public target link or username. Never share your password.</p><label class="label">PROFILE / POST / CHANNEL LINK OR USERNAME</label><input id="target" class="input" placeholder="https://instagram.com/username"><div class="notice">✓ Target format will be checked before payment.</div><button class="primary full" onclick="verifyTarget()">Verify Target →</button>');
+}
+function goServices(){document.getElementById("services").scrollIntoView({behavior:"smooth"})}
+function filterServices(name,btn){
+  document.querySelectorAll(".tab").forEach(x=>x.classList.remove("active"));
+  btn.classList.add("active");
+  document.querySelectorAll("#grid .card").forEach(c=>{
+    c.style.display=(name==="all" || c.dataset.platform===name)?"block":"none";
+  });
+}
+function openModal(x){document.getElementById("content").innerHTML=x;document.getElementById("modal").classList.remove("hide")}
+function closeModal(){document.getElementById("modal").classList.add("hide")}
+function order(si,oi){selected={...services[si],offer:services[si].o[oi]};orderId="PS"+Date.now().toString().slice(-8);openModal(`<div class="eyebrow">${selected.p.toUpperCase()}</div><h3>${selected.offer[0]}</h3><p class="muted">Enter the public target link or username. Never share your password.</p><label class="label">PROFILE / POST / CHANNEL LINK OR USERNAME</label><input id="target" class="input" placeholder="https://instagram.com/username"><div class="notice">✓ Target format will be checked before payment.</div><button class="primary full" onclick="verifyTarget()">Verify Target →</button>`)}
+function verifyTarget(){
+  const input=document.getElementById("target");
+  const t=input ? input.value.trim() : "";
+  if(!t){
+    alert("Please enter a target link or username.");
+    return;
+  }
+  const isUrl=/^https?:\/\//i.test(t);
+  const isUsername=/^@?[A-Za-z0-9._-]{3,}$/.test(t);
+  if(!isUrl && !isUsername){
+    alert("Enter a valid public URL or username.");
+    return;
+  }
+  openModal(`<div class="notice success">✓ Username / target verified</div>
+    <h3>Target verified</h3>
+    <p class="muted">Order <b>${orderId}</b> is ready for payment.</p>
+    <button class="primary full" onclick="payment()">Continue to Payment →</button>`);
+}
+function payment(){let amount=Number(selected.offer[1].replace("₹",""));let upi="YOUR-UPI-ID@upi";let uri=`upi://pay?pa=${encodeURIComponent(upi)}&pn=Pro%20SMM%20Services&am=${amount}&cu=INR&tn=${orderId}`;let qr=`https://api.qrserver.com/v1/create-qr-code/?size=420x420&data=${encodeURIComponent(uri)}`;openModal(`<div class="eyebrow">SECURE PAYMENT</div><h3>Pay for your order</h3><div class="amount">₹${amount}</div><div class="order">Order ID: ${orderId}</div><img class="qr" src="${qr}"><p class="muted center">Replace <code>YOUR-UPI-ID@upi</code> with your real UPI ID before going live.</p><label class="label">UTR / TRANSACTION REFERENCE</label><input id="utr" class="input" placeholder="Enter UTR / reference number"><button class="primary full" onclick="verifyUTR()">Submit UTR →</button>`)}
+async function verifyUTR(){let u=document.getElementById("utr").value.trim();if(!/^[A-Za-z0-9]{8,30}$/.test(u)){alert("Enter a valid UTR/reference number.");return}openModal(`<div class="notice">Checking payment reference…</div><p class="muted">Production mode should verify this reference on your secure backend before marking the order as paid.</p>`);try{let r=await fetch("/api/verify-utr",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({orderId,utr:u,amount:selected.offer[1]})});let d=await r.json();if(d.verified)paid();else pending(d.message||"Payment verification pending.");}catch(e){pending("Demo mode: connect /api/verify-utr to your payment verification provider.");}}
+function paid(){openModal(`<div class="notice success">✓ Payment verified</div><h3>Order confirmed 🎉</h3><p class="muted">Order <b>${orderId}</b> is now queued for processing.</p><button class="primary full" onclick="closeModal()">Done</button>`)}
+function pending(m){openModal(`<div class="notice">${m}</div><h3>Verification pending</h3><p class="muted">Keep your UTR safe and avoid submitting the same transaction repeatedly while it is being checked.</p><button class="secondary full" onclick="closeModal()">Close</button>`)}
+</script>
+</body>
+</html>
